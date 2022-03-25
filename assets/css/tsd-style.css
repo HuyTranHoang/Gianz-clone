@@ -1,12 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
 
 #inputForm {
-    overflow: auto;
-    display: inline-block;
+    /* max-width: 75vw; */
+    /* max-height: 500px; */
+    /* overflow: auto; */
 }
