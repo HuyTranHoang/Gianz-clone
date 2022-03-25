@@ -3,6 +3,6 @@
 
 $(function(){
 
-  $("#inputForm").load("./template-1.html"); 
+  $("#previewForm").load("./template-1.html"); 
   
 });
