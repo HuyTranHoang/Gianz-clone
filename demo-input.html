@@ -14,24 +14,29 @@
 <!-- Thêm class này để lấy css cho font chữ -->
 
 <!-- Vấn đề:  -->
-<!-- 1. Navbar đang bị set width cứng theo reponsive, xong margin auto left-right nên nó bị đẩy dài sang bên phải-->
-<!-- 2. Ảnh được script gán cho 'background-attachment: fixed' nên luôn canh giữa là trình duyệt (Ảnh bị lệch 1 bên) -->
-<!-- 3. Script thêm ảnh động từ skrollr 'data-top-bottom' 'data-bottom-top' không hoạt động. 
-  Cái này có thể khắc phục bằng cách fix cứng url thay vì đợi script đẩy ảnh, nhưng ảnh sẽ không tự chạy lại khi mình scroll lên xuống. --> 
-  <!-- Console báo lỗi như này: https://i.imgur.com/uledrR1.png -->
-<!-- 4. Script lọc theo "tag" dưới mục ảnh cũng không hoạt động -->
+<!-- 1. Thanh menu navbar, elemennt .container đang bị set width cứng theo reponsive, 
+          margin auto left-right nên nó bị đẩy dài sang bên phải-->
+<!-- 2. Ảnh background sector được script gán cho 'background-attachment: fixed' nên luôn canh giữa trình duyệt 
+          (Ảnh bị lệch 1 bên) -->
+<!-- 3. Không có thanh scroll ngang -->
 
-  <div class="container">
+
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-md-4" style="background-color: yellow;">
-        Đây là input <br>
-        Đây là input <br>
-        Đây là input <br>
+      <div class="col-md-4" style="background-color: #ccc;">
+        <p class="tsd-previewText">Thông tin chi tiết: </p>
+        Tên cô dâu & chú rể <input data-for="brideGroomNameText"> <br>
+        Ngày Tháng <input data-for="dateText"><br>
+        Đây là sector 1 <br>
+        Tựa đề <input data-for="titleTextS1"> <br>
+        Phụ đề <input data-for="subtitleTextS1"> <br>
+        Nội dung <input data-for="contentS1"> <br>
         Đây là input <br>
         Đây là input <br>
         Đây là input <br>
       </div>
       <div class="col-md-8">
+        <p class="tsd-previewText">Xem trước: </p>
         <div id="previewForm">
           <!-- template-1.html -->
         </div>
@@ -44,7 +49,8 @@
 
 
   <!-- JQuery -->
-  <script src="./assets/js/jquery-1.12.4.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+  <!-- <script src="./assets/js/jquery-1.12.4.min.js"></script> -->
   <!-- Library JS -->
   <!-- <script src="./assets/js/glanz_library.js"></script> -->
   <!-- Theme JS -->
