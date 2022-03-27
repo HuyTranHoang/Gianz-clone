@@ -11,29 +11,148 @@
 </head>
 
 <body class="gla_middle_titles">
-<!-- Thêm class này để lấy css cho font chữ -->
+  <!-- Thêm class này để lấy css cho font chữ -->
 
-<!-- Vấn đề:  -->
-<!-- 1. Thanh menu navbar, elemennt .container đang bị set width cứng theo reponsive, 
+  <!-- Vấn đề:  -->
+  <!-- 1. Thanh menu navbar, elemennt .container đang bị set width cứng theo reponsive, 
           margin auto left-right nên nó bị đẩy dài sang bên phải-->
-<!-- 2. Ảnh background sector được script gán cho 'background-attachment: fixed' nên luôn canh giữa trình duyệt 
+  <!-- 2. Ảnh background sector được script gán cho 'background-attachment: fixed' nên luôn canh giữa trình duyệt 
           (Ảnh bị lệch 1 bên) -->
-<!-- 3. Không có thanh scroll ngang -->
-
 
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-4" style="background-color: #ccc;">
         <p class="tsd-previewText">Thông tin chi tiết: </p>
-        Tên cô dâu & chú rể <input data-for="brideGroomNameText"> <br>
-        Ngày Tháng <input data-for="dateText"><br>
-        Đây là sector 1 <br>
-        Tựa đề <input data-for="titleTextS1"> <br>
-        Phụ đề <input data-for="subtitleTextS1"> <br>
-        Nội dung <input data-for="contentS1"> <br>
-        Đây là input <br>
-        Đây là input <br>
-        Đây là input <br>
+        <div id="inputForm">
+          <div class="wrapper">
+            <fieldset class="formRow">
+              <div class="formRow--item">
+
+                <h5>Logo và Tên</h5>
+                <label for="brideGroomNameLabel" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="brideGroomNameText" type="text" class="formRow--input js-input"
+                    id="brideGroomNameLabel" placeholder="Tên cô dâu & chú rể">
+                </label>
+                <label for="dateTextLabel" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="dateText" type="text" class="formRow--input js-input" id="dateTextLabel"
+                    placeholder="Ngày Tháng">
+                </label>
+
+                <h5>Sector 1</h5>
+                <label for="titleLabelS1" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="titleTextS1" type="text" class="formRow--input js-input" id="titleLabelS1"
+                    placeholder="Tựa đề">
+                </label>
+                <label for="subtitleLabelS1" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="subtitleTextS1" type="text" class="formRow--input js-input" id="subtitleLabelS1"
+                    placeholder="Phụ đề">
+                </label>
+                <label for="contentLabelS1" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="contentS1" type="text" class="formRow--input js-input" id="contentLabelS1"
+                    placeholder="Nội dung">
+                </label>
+
+                <h5>Sector 2</h5>
+                <label for="titleLabelS2" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="titleTextS2" type="text" class="formRow--input js-input" id="titleLabelS2"
+                    placeholder="Tựa đề">
+                </label>
+                <label for="subtitleLabelS2" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="subtitleTextS2" type="text" class="formRow--input js-input" id="subtitleLabelS2"
+                    placeholder="Phụ đề">
+                </label>
+                <div style="display: flex;">
+                  <label for="countLabelDownS2" class="formRow--input-wrapper js-inputWrapper">
+                    <input data-for="countDownS2" type="text" class="formDateTime formRow--input js-input"
+                      id="countLabelDownS2" placeholder="Ngày">
+                  </label>
+                  <label for="countLabelDownS2" class="formRow--input-wrapper js-inputWrapper">
+                    <input data-for="countDownS2" type="text" class="formDateTime formRow--input js-input"
+                      id="countLabelDownS2" placeholder="Tháng">
+                  </label>
+                  <label for="countLabelDownS2" class="formRow--input-wrapper js-inputWrapper">
+                    <input data-for="countDownS2" type="text" class="formRow--input js-input" id="countLabelDownS2"
+                      placeholder="Năm">
+                  </label>
+                </div>
+
+                <h5>Sector 3</h5>
+                <label for="titleLabelS3" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="titleTextS3" type="text" class="formRow--input js-input" id="titleLabelS3"
+                    placeholder="Tựa đề">
+                </label>
+                <label for="subtitleLabelS3" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="subtitleTextS3" type="text" class="formRow--input js-input" id="subtitleLabelS3"
+                    placeholder="Phụ đề">
+                </label>
+                <label for="contentLabelS3" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="contentS3" type="text" class="formRow--input js-input" id="contentLabelS3"
+                    placeholder="Nội dung">
+                </label>
+
+                <!-- Boxes Text -->
+                <h5>Box 1</h5>
+                <label for="titleBoxS1" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="BoxTitleTextS1" type="text" class="formRow--input js-input" id="titleBoxS1"
+                    placeholder="Tựa đề">
+                </label>
+                <label for="contentBoxS1" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="BoxContentS1" type="text" class="formRow--input js-input" id="contentBoxS1"
+                    placeholder="Nội dung">
+                </label>
+                <h5>Box 2</h5>
+                <label for="titleBoxS2" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="BoxTitleTextS2" type="text" class="formRow--input js-input" id="titleBoxS2"
+                    placeholder="Tựa đề">
+                </label>
+                <label for="contentBoxS2" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="BoxContentS2" type="text" class="formRow--input js-input" id="contentBoxS2"
+                    placeholder="Nội dung">
+                </label>
+                <h5>Box 3</h5>
+                <label for="titleBoxS3" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="BoxTitleTextS3" type="text" class="formRow--input js-input" id="titleBoxS3"
+                    placeholder="Tựa đề">
+                </label>
+                <label for="contentBoxS3" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="BoxContentS3" type="text" class="formRow--input js-input" id="contentBoxS3"
+                    placeholder="Nội dung">
+                </label>
+
+                <h5>Sector 4</h5>
+                <label for="titleLabelS4" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="titleTextS4" type="text" class="formRow--input js-input" id="titleLabelS4"
+                    placeholder="Tựa đề">
+                </label>
+                <label for="subtitleLabelS4" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="subtitleTextS4" type="text" class="formRow--input js-input" id="subtitleLabelS4"
+                    placeholder="Phụ đề">
+                </label>
+
+                <h5>Sector 5</h5>
+                <label for="titleLabelS5" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="titleTextS5" type="text" class="formRow--input js-input" id="titleLabelS5"
+                    placeholder="Tựa đề">
+                </label>
+                <label for="contentLabelS5" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="contentS5" type="text" class="formRow--input js-input" id="contentLabelS5"
+                    placeholder="Phụ đề">
+                </label>
+
+                <h5>Sector 6</h5>
+                <label for="titleLabelS6" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="titleTextS6" type="text" class="formRow--input js-input" id="titleLabelS6"
+                    placeholder="Tựa đề">
+                </label>
+                <label for="contentLabelS6" class="formRow--input-wrapper js-inputWrapper">
+                  <input data-for="contentS6" type="text" class="formRow--input js-input" id="contentLabelS6"
+                    placeholder="Phụ đề">
+                </label>
+
+              </div>
+            </fieldset>
+          </div>
+        </div>
       </div>
       <div class="col-md-8">
         <p class="tsd-previewText">Xem trước: </p>
@@ -49,8 +168,8 @@
 
 
   <!-- JQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
-  <!-- <script src="./assets/js/jquery-1.12.4.min.js"></script> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   -->
+  <script src="./assets/js/jquery-1.12.4.min.js"></script>
   <!-- Library JS -->
   <!-- <script src="./assets/js/glanz_library.js"></script> -->
   <!-- Theme JS -->
