@@ -85,6 +85,7 @@ header {
     font-size: 16px;
     resize: none;
     transition: all 0.2s ease;
+    margin-bottom: 4px;
   }
   .formRow--input-wrapper {
     position: relative;
@@ -102,7 +103,7 @@ header {
     transform: translateY(0);
   }
   .formRow--input-wrapper.active .formRow--input:not(:focus):not(:hover) ~ .placeholder {
-    color: pink;
+    color: #aa4547;
     /* fec8c9 */
   }
   .formRow--input-wrapper .formRow--input:focus, .formRow--input-wrapper .formRow--input:hover {
