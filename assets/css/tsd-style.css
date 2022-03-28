@@ -59,6 +59,7 @@ header {
 
 #inputForm h5 {
   margin: 16px 0;
+  font-weight: 600;
 }
 
 
@@ -103,7 +104,7 @@ header {
     transform: translateY(0);
   }
   .formRow--input-wrapper.active .formRow--input:not(:focus):not(:hover) ~ .placeholder {
-    color: #aa4547;
+    color: pink;
     /* fec8c9 */
   }
   .formRow--input-wrapper .formRow--input:focus, .formRow--input-wrapper .formRow--input:hover {
@@ -130,7 +131,7 @@ header {
             user-select: none;
   }
 
-  .formDateTime {
+  .form-3-col {
     width: 98%;
     margin-left: auto;
     margin-right: auto;
