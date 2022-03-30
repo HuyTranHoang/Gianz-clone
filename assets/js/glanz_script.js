@@ -447,13 +447,13 @@
 
 	
 
-	$('.gla_countdown').each(function(){
-		var year = $(this).attr('data-year');
-		var month = $(this).attr('data-month');
-		var day = $(this).attr('data-day');
-		$(this).countdown({until: new Date(year,month-1,day)});
+	// $('.gla_countdown').each(function(){
+	// 	var year = $(this).attr('data-year');
+	// 	var month = $(this).attr('data-month');
+	// 	var day = $(this).attr('data-day');
+	// 	$(this).countdown({until: new Date(year,month-1,day)});
 
-	});
+	// });
 
 	$('.gla_countdown_gold').each(function(){
 		var year = $(this).attr('data-year');

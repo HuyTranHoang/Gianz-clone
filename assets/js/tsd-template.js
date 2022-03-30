@@ -10,6 +10,9 @@ $(document).ready(function () {
 })
 
 
+
+
+
 function getData(callback) {
     fetch(tsdApi)
         .then (function(response) {
@@ -19,9 +22,45 @@ function getData(callback) {
 }
 
 function renderData(data) {
-    console.log(data.dataInfogroomName);
-    $("#brideGroomNameText").text(function(){
-        return data.dataInfo.groomName;
+    // console.log(data.dataInfo.weddingPartyDate);
+    $("#brideGroomNameText").text(function() {
+        return data.dataInfo.groomName + ' & ' + data.dataInfo.brideName;
       });
+
+    $("#dateText").text(function() {
+        return moment(data.dataInfo.weddingPartyDate).format("Do MMM, YYYY");
+    })
+    
+    $("#titleTextS2").text(function() {
+        return moment(data.dataInfo.weddingPartyDate).format("Do MMM, YYYY");
+    })
+    
+    $("#subtitleTextS2").text(function() {
+        return 'Bến Lức, Long An';
+      });
+
+    $('.gla_countdown').each(function(){
+        var year = moment(data.dataInfo.weddingPartyDate).get('year');
+        var month = moment(data.dataInfo.weddingPartyDate).get('month');
+        var day = moment(data.dataInfo.weddingPartyDate).get('date');
+        $(this).countdown({until: new Date(year,month,day)});
+	});
+
+    $("#BoxTitleTextS1").text(function() {
+        return 'Địa điểm'
+    })
+
+    $("#BoxContentS1").text (function() {
+        return data.dataInfo.weddingPartyDescription;
+    })
+
+    $("#BoxTitleTextS2").text(function() {
+        return 'Thời gian'
+    })
+
+    $("#BoxContentS2").text(function() {
+        return data.dataInfo.displayTimeEvent;
+    })
+
 }
 
