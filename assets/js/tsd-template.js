@@ -38,6 +38,7 @@ function renderData(data) {
         return 'Bến Lức, Long An';
       });
 
+    //   Js countdown
     $('.gla_countdown').each(function(){
         var year = moment(data.dataInfo.weddingPartyDate).get('year');
         var month = moment(data.dataInfo.weddingPartyDate).get('month');

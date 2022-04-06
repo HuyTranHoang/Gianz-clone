@@ -45,7 +45,53 @@ $(function () {
       });
   });
 
+  // Input File
 
+  const input = document.querySelector('#slider-input');
+  const preview = document.querySelector('.slider-input-preview');
+  input.addEventListener('change', updateImageDisplay);
+  // input.style.opacity = 0;
+
+  function updateImageDisplay() {
+    while (preview.firstChild) {
+      preview.removeChild(preview.firstChild);
+    }
+
+    const curFiles = input.files;
+    if (curFiles.length === 0) {
+      const para = document.createElement('p');
+      para.textContent = 'Chưa có file được chọn để upload';
+      preview.appendChild(para);
+    } else {
+      if (validFileType(curFiles[0])) {
+        const para = document.createElement('p');
+        para.textContent = `File name ${curFiles[0].name}`;
+        $('#slider_pic').attr( "style", 'background-image: url("' + URL.createObjectURL(curFiles[0]) +'"); background-attachment: fixed;');
+      } else {
+        para = document.createElement('p');
+        para.textContent = `File name ${curFiles.name}: Định dạng ảnh không hợp lệ, vui lòng chọn lại.`;
+        preview.appendChild(para);
+      }
+    }
+  }
+
+  // https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
+  const fileTypes = [
+    "image/apng",
+    "image/bmp",
+    "image/gif",
+    "image/jpeg",
+    "image/pjpeg",
+    "image/png",
+    "image/svg+xml",
+    "image/tiff",
+    "image/webp",
+    "image/x-icon"
+  ];
+
+  function validFileType(file) {
+    return fileTypes.includes(file.type);
+  }
 
 
 });
