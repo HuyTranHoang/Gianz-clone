@@ -5,9 +5,7 @@
 
 $(document).ready(function () {
     getData(renderData);
-
 })
-
 
 
 var tsdApi = 'http://thiepsodo.com/DEV/order/8'
@@ -119,7 +117,6 @@ function renderData(data) {
     $(window).resize(function(){
       $grid.isotope('layout');
     });
-    console.log(imagesList);
 
     // js LightBox
     $('.lightbox').magnificPopup({ 
@@ -130,4 +127,38 @@ function renderData(data) {
       });
 
 }
+
+
+
+// Đóng mở thiệp
+const openBtn = document.querySelector('.js-open-btn')
+const closeBtn = document.querySelector('.js-close-btn')
+const invitation = document.querySelector('.tsd_invitation_container')
+
+function showInvitation () {
+    invitation.classList.add('tsd--active')
+}
+
+function hideInvitation () {
+    invitation.classList.remove('tsd--active')
+}
+
+function hideOpenBtn () {
+    openBtn.classList.remove('tsd--active')
+}
+
+openBtn.addEventListener('click',showInvitation)
+closeBtn.addEventListener('click',hideInvitation)
+
+// Lấy param url
+var idGuest = getParamFromUrl('idGuest')
+
+function getParamFromUrl(paramName){
+    let searchParams = new URLSearchParams(document.location.search)
+    return searchParams.get(paramName)
+}
+
+// Kiểm tra có paramGuest không
+
+(idGuest != null) ? showInvitation() : hideOpenBtn() ;
 
