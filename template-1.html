@@ -491,10 +491,10 @@
                         <img src="./assets/img/logo/glanz_logo.png" alt="" class="gla_logo_rev">
                         <div class="gla_logo_txt">
                             <!-- Logo -->
-                            <a href="#" id ="brideGroomNameText" class="gla_logo active">Andy & Jeska</a>
+                            <a href="#" class="gla_logo active">Andy & Jeska</a>
 
                             <!-- Text Logo -->
-                            <div id = "dateText" class="gla_logo_und">April 30th, 2022</div>
+                            <div class="gla_logo_und">April 30th, 2022</div>
                         </div>
                     </div>
 
@@ -1131,8 +1131,50 @@
 <!-- Theme JS -->
 <script src="./assets/js/glanz_script.js"></script> 
 
+<script>
+    function renderImages() {
 
-<script src="./assets/js/tsd-template.js"></script>
+    // js filter 
+    var $grid = $('.grid').isotope({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        stagger: 0,
+        transitionDuration: '0',
+        isAnimated: true,
+        masonry: {
+          columnWidth: '.grid-item',
+          
+        }	  
+      });
+      $grid.imagesLoaded().progress( function() {
+        $grid.isotope('layout');
+      });
+
+    $('.masonry').masonry({
+        itemSelector: '.masonry-item',
+    });
+
+    $('.filter-button-group').on( 'click', 'a', function() {
+      var filterValue = $(this).attr('data-filter');
+      $grid.isotope({ filter: filterValue });
+    });
+
+    $(window).resize(function(){
+      $grid.isotope('layout');
+    });
+
+    // js LightBox
+    $('.lightbox').magnificPopup({ 
+        type: 'image',
+        gallery:{
+          enabled:true
+        }
+      });
+}
+    renderImages();
+</script>
+
+<!-- <script src="./assets/js/tsd-template.js"></script> -->
 
 </body>
 

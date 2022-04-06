@@ -5,6 +5,7 @@
 
 $(document).ready(function () {
     getData(renderData);
+    
 })
 
 
@@ -90,7 +91,11 @@ function renderData(data) {
         $('.gla_portfolio_no_padding').append(divFilter.get(0).outerHTML);
     }
 
+    renderImages();
 
+}
+
+function renderImages() {
     // js filter 
     var $grid = $('.grid').isotope({
         itemSelector: '.grid-item',
@@ -127,9 +132,7 @@ function renderData(data) {
           enabled:true
         }
       });
-
 }
-
 
 
 // Đóng mở thiệp
