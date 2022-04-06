@@ -41,7 +41,9 @@ function renderData(data) {
         var year = moment(data.dataInfo.weddingPartyDate).get('year');
         var month = moment(data.dataInfo.weddingPartyDate).get('month');
         var day = moment(data.dataInfo.weddingPartyDate).get('date');
-        $(this).countdown({until: new Date(year,month,day)});
+        $(this).countdown({
+            until: new Date(year,month,day),
+        });
 	});
 
     $("#BoxTitleTextS1").text(function() {
